@@ -14,9 +14,9 @@ print("This is the name of the script: " + sys.argv[0])
 print("Number of arguments: " + str(len(sys.argv)))
 print("The arguments are: " + str(sys.argv))
 print(str(sys.argv[1:]))
+
 # Read command line args
-myopts, args = getopt.getopt(sys.argv[1:],"h:m:")
-opts, args = getopt.getopt(sys.argv[1:], 'm:p:h', ['hour=', 'minute=', 'help'])
+opts, args = getopt.getopt(sys.argv[1:], 'h:m:h', ['hour=', 'minute=', 'help'])
 
 for opt, arg in opts:
     if opt in ('-h', '--help'):
