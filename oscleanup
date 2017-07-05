@@ -1,0 +1,14 @@
+import os
+
+# Get Downloads folder:
+downloads = '/Users/tadswider/Downloads'
+
+# Iterate over every file in Downloads:
+files = []
+dirnames = []
+for (dirpath, dirnames, filenames) in os.walk(downloads):
+    files.extend(filenames)
+    files.extend(dirnames)
+    print(*files, sep='\n')
+    print(dirnames)
+    break
